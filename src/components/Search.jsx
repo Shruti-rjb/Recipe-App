@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import '../styles/search.scss';
 import {FaSearch} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
-import {toast,ToastContainer} from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function Search() {
@@ -30,16 +29,7 @@ function Search() {
         placeholder="Search for the Recipe..."
        
         />
-<ToastContainer
-position="top-right"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover/>        
+   
        
     </form>
   )
