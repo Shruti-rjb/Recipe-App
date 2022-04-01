@@ -3,32 +3,36 @@ import '../styles/popular.scss'
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import {Link} from 'react-router-dom';
+import {useContext} from 'react';
+import PageContext from "../context/PageContext";
 
 function Popular() {
-  const [popular, setPopular] = useState([]);
 
-  useEffect(() => {
-    getPopular();
-  }, []);
+  const {pages} = useContext(PageContext);
+  // const [popular, setPopular] = useState([]);
 
-  const getPopular = async () => {
+  // useEffect(() => {
+  //   getPopular();
+  // }, []);
 
-    const check =localStorage.getItem('popular');
+  // const getPopular = async () => {
 
-    if(check){
-      setPopular(JSON.parse(check));
-    }else{
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
-      );
+  //   const check =localStorage.getItem('popular');
+
+  //   if(check){
+  //     setPopular(JSON.parse(check));
+  //   }else{
+  //     const api = await fetch(
+  //       `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+  //     );
     
 
-    const data = await api.json();
-    localStorage.setItem('popular',JSON.stringify(data.recipes));
-    //console.log(data,"recipes")
-    setPopular(data.recipes);
-  }
-  };
+  //   const data = await api.json();
+  //   localStorage.setItem('popular',JSON.stringify(data.recipes));
+  //   //console.log(data,"recipes")
+  //   setPopular(data.recipes);
+  // }
+  // };
  
     return (
       <div>
@@ -42,7 +46,7 @@ function Popular() {
         gap:"2rem",
       }}>
 
-        {popular?.map((recipe) => {
+        {pages?.map((recipe) => {
           return (
             <SplideSlide key={recipe.id}>
               <div className="block">

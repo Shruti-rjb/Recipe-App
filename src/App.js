@@ -7,10 +7,13 @@ import Search from "./components/Search";
 import { Link } from "react-router-dom";
 import {SiCodechef} from "react-icons/si";
 import {GiKnifeFork} from "react-icons/gi";
+import PageState from "./context/PageState";
 
 function App() {
   return (
     <div className="App">
+      <PageState>
+
       <BrowserRouter>
       <Nav >
         <GiKnifeFork/><SiCodechef/>
@@ -20,6 +23,8 @@ function App() {
       <Category/>
       <Pages/>
       </BrowserRouter>
+      </PageState>
+   
     
     </div>
   );

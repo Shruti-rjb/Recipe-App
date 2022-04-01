@@ -2,10 +2,8 @@ import {FaPizzaSlice} from 'react-icons/fa';
 import {GiNoodles, GiSushis,GiHamburger} from 'react-icons/gi';
 import '../styles/category.scss';
 import { NavLink } from 'react-router-dom';
-
-
 import React from 'react'
-import styledComponents from 'styled-components';
+
 
 function Category() {
   return (

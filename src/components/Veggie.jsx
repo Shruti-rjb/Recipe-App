@@ -6,7 +6,10 @@ import {Link} from 'react-router-dom';
 
 
 
+
 function Veggie() {
+
+  
   const [veggie, setVeggie] = useState([]);
 
   useEffect(() => {
@@ -68,7 +71,7 @@ function Veggie() {
 }
 
 
-// const Wrapper = styled.div`ali`
+
   
 
 

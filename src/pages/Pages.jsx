@@ -6,12 +6,14 @@ import Searched from "./Searched";
 import Recipe from "./Recipe";
 import {AnimatePresence} from "framer-motion";
 
+
 function Pages() {
 
   const location =useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
-   <Routes Location ={location} key={location.pathname}>
+  
+       <AnimatePresence exitBeforeEnter>
+      <Routes Location ={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
       <Route path="/cuisine/:type" element={<Cuisine />} />
       <Route path="/searched/:search" element={<Searched/>}/>
@@ -19,6 +21,8 @@ function Pages() {
     </Routes>
     </AnimatePresence>
  
+
+   
   );
 }
 
