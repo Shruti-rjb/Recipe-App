@@ -21,7 +21,7 @@ function Searched() {
 
   return (
     <div className='gridBlock'>
-        {searchedRecipes.map((items)=>{
+        {searchedRecipes?.map((items)=>{
             return(
                 <div className='gridCard' key ={items.id}>
                     <Link to={"/recipe/"+items.id}>
